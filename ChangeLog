@@ -1,0 +1,29 @@
+$Rev$
+v 0.3 :
+	03/02/07 :
+		Multi SVN repos are available !
+
+	31/01/07 :
+		Code injection beginning
+		SVN Repository is online !!
+
+	30/01/07 :
+		A very basic performance manager is wrote.
+		More work need to improve it : code injection ? 
+		Need to debug !!!
+
+	28/01/07 :
+		A real C++ memory leak is implemented !!! (I hope)
+		File logger is in the place.
+v 0.2 : 
+	21/01/07 :
+		Reverse mode for find box : not yet fully implemented
+		Bookmark & clean bookmarks (Small star icon add)
+		Settings manager (Store frame size & position, reverse and
+		bookmark boolean)
+
+	10/01/07 :
+		Adding find box
+
+v 0.1 :
+	Initial version

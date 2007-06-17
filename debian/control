@@ -1,0 +1,14 @@
+Source: sdatabase
+Section: misc
+Priority: optional
+Maintainer: Jean-Michel Frouin <snoogie@gmail.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: sdatabase
+Architecture: any
+Depends: 
+Description: A simple database manager
+A simple database manager who can import/export csv or xml files
+.
+No connection with SQL or Oracle base

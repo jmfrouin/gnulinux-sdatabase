@@ -1,0 +1,22 @@
+This package was debianized by Jean-Michel Frouin <jmfrouin@gmail.com> on
+Sun, 18 Feb 2007 22:30:43 +0100.
+
+It was downloaded from http://www.oceaneds.com
+
+Upstream Author: Frouin Jean-Michel 8jmfrouin@gmail.com)
+
+Copyright: <put the year(s) of the copyright, and the names of the
+            copyright holder(s) here>
+
+License:
+
+<Put the license of the package here>
+
+
+The Debian packaging is (C) 2007, Jean-Michel Frouin <snoogie@libretto.oceaneds.com> and
+is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
+
+
+# Please also look if there are files or directories which have a
+# different copyright/license attached and list them here.
+
