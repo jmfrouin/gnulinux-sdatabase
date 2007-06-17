@@ -12,6 +12,13 @@
 #include <vector>
 
 //General app infos
+#define MAJOR 0
+#define MINOR 4
+#define BUG 0
+#define t(u) #u
+#define VERSION(M,m,b) t(M) "." t(m) "." t(b)
+#define VER VERSION(MAJOR,MINOR,BUG)
+
 const wxString APP_NAME = _T("SDatabase v0.32");
 const wxString APP_VENDOR = _T("JMFSoft");
 
