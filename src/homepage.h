@@ -27,5 +27,6 @@
 *  \image html sdatabase_windows2.png
 * \section history History
 *
-* 16 June 2007 : Start cmake migration.
+* $Date$
+* $Rev$
 */
