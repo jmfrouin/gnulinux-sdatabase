@@ -14,7 +14,7 @@
 */
 class CTableView: public wxListCtrl
 {
-public:
+	public:
 	/*!
 	* @brief Default constructor.
 	* @param parent A pointer on parent wxWindow.
@@ -25,9 +25,8 @@ public:
 	* @param style Style of CTableView.
 	* @todo Check if parentframe == parent
 	*/
-    CTableView(wxFrame* parentframe, wxWindow *parent, const wxWindowID id, const wxPoint& pos, const wxSize& size, long style)
-        : wxListCtrl(parent, id, pos, size, style),m_Parent(parentframe),
-          m_attr(*wxBLUE, *wxLIGHT_GREY, wxNullFont)
+	CTableView(wxFrame* parentframe, wxWindow *parent, const wxWindowID id, const wxPoint& pos, const wxSize& size, long style)
+        : wxListCtrl(parent, id, pos, size, style), m_attr(*wxBLUE, *wxLIGHT_GREY, wxNullFont),m_Parent(parentframe)
         {
             //EnableContextMenu();
 #if defined DEBUG
@@ -38,12 +37,12 @@ public:
 	/*!
 	* @brief Destructor.
 	*/
-    ~CTableView()
-    {
+	~CTableView()
+	{
 #if defined DEBUG
-    std::cout << "[DEBUG] [CTableView] ~CTableView()" << std::endl;
+	    std::cout << "[DEBUG] [CTableView] ~CTableView()" << std::endl;
 #endif
-    }
+	}
 
 	/*!
 	* @brief Insert an item in database.

@@ -61,11 +61,13 @@ class CPerformanceAnalysis
 		 */
 		struct Time
 		{
-			Time():Hour(0),Minute(0),Second(0),Millisecond(0)
-				{}
+			Time():
+			Hour(0),Minute(0),Second(0),Millisecond(0)
+			{}
 
-			Time(int h, int m, int s, int ms):Hour(h),Minute(m),Second(s),Millisecond(ms)
-				{}
+			Time(int h, int m, int s, int ms):
+			Hour(h),Minute(m),Second(s),Millisecond(ms)
+			{}
 
 			bool operator < (const Time& time)
 			{
@@ -101,7 +103,7 @@ class CPerformanceAnalysis
 		 */
 		struct Function_Report
 		{
-			Function_Report():AccesTime(0), MaxExecutionTime(0,0,0,0), MinExecutionTime(23,59,59,999)
+			Function_Report():AccesTime(0), MinExecutionTime(23,59,59,999), MaxExecutionTime(0,0,0,0)
 				{}
 
 			int         AccesTime;

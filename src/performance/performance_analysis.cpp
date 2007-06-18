@@ -109,7 +109,6 @@ void CPerformanceAnalysis::Report_Analysis()
         m_File << "Minimum execution time : " << _it->second.MinExecutionTime << std::endl;
         //Max execution time
         m_File << "Maximum exectuion time : " << _it->second.MaxExecutionTime << std::endl;
-
     }
     m_File << "-----------------------------------------------------------------" << std::endl;
 }

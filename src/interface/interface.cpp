@@ -51,7 +51,7 @@ END_EVENT_TABLE ()
 //-----------------------------------------------------------------------------------------------
 
 CMainFrame::CMainFrame(wxWindow* parent, wxWindowID id, const wxString& caption, const wxPoint& pos, const wxSize& size, long style)
-:m_imageListNormal(0),m_imageListSmall(0), m_imageListToolbar(0),
+:m_imageListNormal(0), m_imageListToolbar(0), m_imageListSmall(0),
 /*m_Panel(0)*/m_SplitWindow(0), m_FileExplorer(0), m_TableView(0), m_Manager(0), m_SettingsManager(0),
 m_TBShowToolTips(true), m_SmallTB(true)
 {
@@ -534,11 +534,11 @@ void CMainFrame::RecreateToolbar ()
     INIT_TOOL(open);
     INIT_TOOL(save);
 
-//#define INIT_TOOL_BMP(bmp) \
-//    toolBarBitmaps[TB_##bmp] = wxBitmap(bmp##_xpm)
-//
-//    INIT_TOOL_BMP(new);
-//    INIT_TOOL_BMP(open);
+/*#define INIT_TOOL_BMP(bmp) \
+    toolBarBitmaps[TB_##bmp] = wxBitmap(bmp##_xpm)
+
+    INIT_TOOL_BMP(new);
+    INIT_TOOL_BMP(open);*/
 
     int w = m_imageListToolbar->GetBitmap(TB_new).GetWidth(),
         h = m_imageListToolbar->GetBitmap(TB_new).GetHeight();

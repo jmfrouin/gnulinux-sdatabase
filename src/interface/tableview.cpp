@@ -81,11 +81,11 @@ void CTableView::OnColEndDrag(wxListEvent& event)
 
 void CTableView::OnBeginDrag(wxListEvent& event)
 {
-    const wxPoint& pt = event.m_pointDrag;
+    //const wxPoint& pt = event.m_pointDrag;
 #if defined DEBUG
     std::cout << "[DEBUG] [CTableView] OnBeginDrag" << std::endl;
 #endif
-    int flags;
+    //int flags;
     //wxLogMessage( wxT("OnBeginDrag at (%d, %d), item %ld."),
                   //pt.x, pt.y, HitTest(pt, flags) );
 }
