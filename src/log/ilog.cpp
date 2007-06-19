@@ -4,6 +4,7 @@ ILog::ILog()
 {
 }
 
+
 ILog::~ILog()
 {
 }

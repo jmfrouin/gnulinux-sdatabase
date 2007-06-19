@@ -47,6 +47,7 @@ class CTools
 
 	private:
 		int        m_FindLastPos;///<Find stuff
-		wxString*  m_FindLastString;///<Find stuff
+								 ///<Find stuff
+		wxString*  m_FindLastString;
 };
 #endif							 //_TOOLS_H_

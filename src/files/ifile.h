@@ -6,7 +6,7 @@
 
 /*!
  * @brief File manipulation plugins interface.
-*/
+ */
 class IFile
 {
 	public:

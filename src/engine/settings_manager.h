@@ -7,49 +7,49 @@
 #include <vector>
 
 /*!
-* @brief A settings manager.
-*/
+ * @brief A settings manager.
+ */
 class CSettingsManager
 {
 	public:
 		/*!
-		* @brief Default constructor.
-		*/
+		 * @brief Default constructor.
+		 */
 		CSettingsManager();
 		/*!
-		* @brief 2nd constructor.
-		*/
+		 * @brief 2nd constructor.
+		 */
 		int Construct();
 		/*!
-		* @brief Destructor.
-		*/
+		 * @brief Destructor.
+		 */
 		~CSettingsManager();
 
 		/*!
-		* @brief Store frame size and pos on clean exit (Quit from menu or CTRL+Q).
-		* @param	rect The current sdatabase size and pos.
-		*/
+		 * @brief Store frame size and pos on clean exit (Quit from menu or CTRL+Q).
+		 * @param	rect The current sdatabase size and pos.
+		 */
 		void StoreFrameSize(wxRect rect);
 		/*!
-		* @brief Retrieve frame size and pos on startup.
-		*/
+		 * @brief Retrieve frame size and pos on startup.
+		 */
 		wxRect DetermineFrameSize ();
 
 		/*!
-		* @brief Store find settings.
-		* @param	_reverse	True, if reverse if selected from Find dialog.
-		* @param	_bookmark	True, if bookmark if selected from Find dialog.
-		*/
+		 * @brief Store find settings.
+		 * @param	_reverse	True, if reverse if selected from Find dialog.
+		 * @param	_bookmark	True, if bookmark if selected from Find dialog.
+		 */
 		void StoreFindSettings(bool _reverse, bool _bookmark);
 		/*!
-		* @brief Load bookmark setting for Find dialog.
-		* @todo	Remove the s at the end of name
-		*/
+		 * @brief Load bookmark setting for Find dialog.
+		 * @todo	Remove the s at the end of name
+		 */
 		bool LoadFindBookmarkSettings();
 		/*!
-		* @brief Load reverse setting for Find dialog.
-		* @todo	Remove the s at the end of name
-		*/
+		 * @brief Load reverse setting for Find dialog.
+		 * @todo	Remove the s at the end of name
+		 */
 		bool LoadFindReverseSettings();
 
 	private:

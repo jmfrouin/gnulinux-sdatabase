@@ -18,6 +18,7 @@ void CDummy::dummy()
 	g_pa->EndTiming();
 }
 
+
 void CDummy::dummy2()
 {
 	//Performance analysis

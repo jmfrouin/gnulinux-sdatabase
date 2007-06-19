@@ -6,15 +6,14 @@
  */
 class CDummy
 {
-public:
-	/*!
-	* @brief Dummy function 1
-	*/
-	void dummy();
-	/*!
-	* @brief Dummy function 2
-	*/
-	void dummy2();
+	public:
+		/*!
+		 * @brief Dummy function 1
+		 */
+		void dummy();
+		/*!
+		 * @brief Dummy function 2
+		 */
+		void dummy2();
 };
-
-#endif //_DUMMY_H_
+#endif							 //_DUMMY_H_

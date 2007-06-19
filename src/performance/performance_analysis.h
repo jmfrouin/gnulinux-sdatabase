@@ -9,50 +9,50 @@
 #define VERSION_PERF_ANALYSIS 0.01
 
 /*!
-* @brief Performance analysis tool.
-*/
+ * @brief Performance analysis tool.
+ */
 class CPerformanceAnalysis
 {
 	public:
 		/*!
-		* @brief	Default constructor.
-		*/
+		 * @brief	Default constructor.
+		 */
 		CPerformanceAnalysis();
 		/*!
-		* @brief	Destructor.
-		*/
+		 * @brief	Destructor.
+		 */
 		~CPerformanceAnalysis();
 
 		/*!
-		* @brief	Add function to performance analysis.
-		* @param	_Name Name of function to investigate.
-		*/
+		 * @brief	Add function to performance analysis.
+		 * @param	_Name Name of function to investigate.
+		 */
 		int AddFunction(std::string _Name);
 		/*!
-		* @brief	Start timing.
-		*/
+		 * @brief	Start timing.
+		 */
 		void StartTiming();
 		/*!
-		* @brief	Stop timing.
-		*/
+		 * @brief	Stop timing.
+		 */
 		void EndTiming();
 
 	private:
 		/*!
-		* @brief	Write analysis report.
-		*/
+		 * @brief	Write analysis report.
+		 */
 		void Report_Analysis();
 		/*!
-		* @brief	Retrieve current time.
-		* @param	_hour Current hour.
-		* @param	_minute Current minute.
-		* @param	_second Current second.
-		*/
+		 * @brief	Retrieve current time.
+		 * @param	_hour Current hour.
+		 * @param	_minute Current minute.
+		 * @param	_second Current second.
+		 */
 		void GetCurrentTime(int& _hour, int& _minute, int& _second);
 		/*!
-		* @brief	Retrieve current time in millisecond.
-		* @param	_millisecond Current millisecond.
-		*/
+		 * @brief	Retrieve current time in millisecond.
+		 * @param	_millisecond Current millisecond.
+		 */
 		void GetPreciseCurrentTime(int& _millisecond);
 
 	public:
@@ -63,11 +63,11 @@ class CPerformanceAnalysis
 		{
 			Time():
 			Hour(0),Minute(0),Second(0),Millisecond(0)
-			{}
+				{}
 
 			Time(int h, int m, int s, int ms):
 			Hour(h),Minute(m),Second(s),Millisecond(ms)
-			{}
+				{}
 
 			bool operator < (const Time& time)
 			{

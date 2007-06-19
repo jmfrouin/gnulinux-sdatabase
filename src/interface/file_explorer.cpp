@@ -7,7 +7,7 @@
 #endif
 
 BEGIN_EVENT_TABLE(CFileExplorer, wxGenericDirCtrl)
-	EVT_TREE_ITEM_ACTIVATED(wxID_ANY, CFileExplorer::OnSel)
+EVT_TREE_ITEM_ACTIVATED(wxID_ANY, CFileExplorer::OnSel)
 END_EVENT_TABLE ()
 
 void CFileExplorer::OnSel(wxTreeEvent& event)

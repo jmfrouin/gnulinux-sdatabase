@@ -14,22 +14,20 @@ class SDatabase: public wxApp
 {
 	public:
 
-	/*!
-	 *  Default constructor.
-	 */
-	SDatabase();
-	/*!
-	 * Destructor.
-	 */
-	~SDatabase();
+		/*!
+		 *  Default constructor.
+		 */
+		SDatabase();
+		/*!
+		 * Destructor.
+		 */
+		~SDatabase();
 
-	/*!
-	 * @brief from wxApp.
-	 */
-	virtual bool OnInit();
+		/*!
+		 * @brief from wxApp.
+		 */
+		virtual bool OnInit();
 };
 
 DECLARE_APP(SDatabase)
-
-#endif   // _SDATABASE_H_
-
+#endif							 // _SDATABASE_H_

@@ -1,8 +1,8 @@
 /*
-* @brief :      Commons definition file
-* @author :     Jean-Michel Frouin
-* @date :       09/01/2007
-*/
+ * @brief :      Commons definition file
+ * @author :     Jean-Michel Frouin
+ * @date :       09/01/2007
+ */
 
 #ifndef _DEF_H_
 #define _DEF_H_
@@ -35,43 +35,42 @@ const wxString FIND_BOOKMARK = wxT("FIND_BOOKMARK");
 
 enum
 {
-        LIST_ABOUT = wxID_ABOUT,
+	LIST_ABOUT = wxID_ABOUT,
 
-        //Menu enums
-        MISC_ABOUT = wxID_ABOUT,
-        FILE_QUIT = wxID_EXIT,
-        FILE_OPEN = wxID_HIGHEST,
-        FILE_NEW,
-        FILE_SAVE,
+	//Menu enums
+	MISC_ABOUT = wxID_ABOUT,
+	FILE_QUIT = wxID_EXIT,
+	FILE_OPEN = wxID_HIGHEST,
+	FILE_NEW,
+	FILE_SAVE,
 
-        EDIT_ADD,
-        EDIT_DEL,
-        EDIT_FIND,
-        EDIT_CLEANFINDED,
+	EDIT_ADD,
+	EDIT_DEL,
+	EDIT_FIND,
+	EDIT_CLEANFINDED,
 
-        ID_TOOLBAR,
-        ID_COMBO,
+	ID_TOOLBAR,
+	ID_COMBO,
 
-        DIALOG_FIND,
-        LIST_CTRL,
+	DIALOG_FIND,
+	LIST_CTRL,
 
-        //Find dialog
-        ID_FIND,
+	//Find dialog
+	ID_FIND,
 
 };
 
 //Toolbar enums
 enum Toolbar_Positions
 {
-    TOOLBAR_LEFT,
-    TOOLBAR_TOP,
-    TOOLBAR_RIGHT,
-    TOOLBAR_BOTTOM
+	TOOLBAR_LEFT,
+	TOOLBAR_TOP,
+	TOOLBAR_RIGHT,
+	TOOLBAR_BOTTOM
 };
 
 static const long TOOLBAR_STYLE = wxTB_FLAT | wxTB_DOCKABLE | wxTB_TEXT;
 
 typedef std::vector<wxString> TTuple;
 typedef std::list<TTuple> TTable;
-
-#endif   // _DEF_H_
+#endif							 // _DEF_H_

@@ -7,9 +7,9 @@ CPerformanceAnalysis* g_pa;
 
 int main(int argc, char **argv)
 {
-    	g_pa = new CPerformanceAnalysis();
+	g_pa = new CPerformanceAnalysis();
 	Bob a;
 	a.bob();
-    	delete g_pa;
+	delete g_pa;
 	return 1;
 }

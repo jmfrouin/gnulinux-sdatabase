@@ -15,6 +15,7 @@ inline void* operator new(std::size_t Size, const char* File, int Line)
 	return g_mm.Allocate(Size, File, Line, false);
 }
 
+
 /*!
  * @brief new[] operator surcharge
  */
@@ -23,6 +24,7 @@ inline void* operator new[](std::size_t Size, const char* File, int Line)
 	return g_mm.Allocate(Size, File, Line, true);
 }
 
+
 /*!
  * @brief delete operator surcharge
  */
@@ -30,6 +32,7 @@ inline void operator delete(void* Ptr)
 {
 	g_mm.Free(Ptr, false);
 }
+
 
 /*!
  * @brief delete[] operator surcharge

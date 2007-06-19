@@ -78,8 +78,8 @@ class CManager
 		bool Find(wxString _search, int& _col, int& _row, bool _fromlastpos, bool _reverse);
 
 		/*!
-		* @brief Retrieve the current database filename;
-		*/
+		 * @brief Retrieve the current database filename;
+		 */
 		wxString GetFilename ();
 
 		/*!
@@ -87,8 +87,8 @@ class CManager
 		 */
 		void WriteFile ();
 		/*!
-		* @brief from IFile
-		*/
+		 * @brief from IFile
+		 */
 		bool OpenFile(const wxString _filename);
 
 	private:

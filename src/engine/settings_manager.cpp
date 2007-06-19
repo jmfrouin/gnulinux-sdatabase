@@ -97,6 +97,7 @@ void CSettingsManager::StoreFindSettings(bool _reverse, bool _bookmark)
 
 }
 
+
 bool CSettingsManager::LoadFindBookmarkSettings()
 {
 	bool bookmark = false;
@@ -112,6 +113,7 @@ bool CSettingsManager::LoadFindBookmarkSettings()
 	return bookmark;
 }
 
+
 bool CSettingsManager::LoadFindReverseSettings()
 {
 	bool reverse = false;
@@ -119,10 +121,10 @@ bool CSettingsManager::LoadFindReverseSettings()
 	wxString key = LOCATION + wxString("0");
 	m_Config->Read (key + _T("/") + FIND_REVERSE, reverse);
 
-#if defined DEBUG
+	#if defined DEBUG
 	std::cout << "[DEBUG] [CSettingsManager] LoadFindSettings()" << std::endl;
 	std::cout << "Reverse : " << reverse << std::endl;
-#endif
+	#endif
 
 	return reverse;
 }
