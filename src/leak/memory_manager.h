@@ -28,11 +28,18 @@ GNU General Public License for more details.
 #include <string>
 
 #include <log/ilog.h>
+#include <def.h>
 
-#define VERSION_MEMORY_MANAGER 0.2
+#define MAJOR_MM 0
+#define MINOR_MM 3
+#define BUG_MM 0
+#define VERSION_MEMORY_MANAGER VERSION(MAJOR_MM,MINOR_MM,BUG_MM)
 
 /*!
  * @brief Memory manager, in fact for the moment it's only a leak detector.
+ * @note Historical :
+ * @note 	v0.3.0 : Define version using define.\nUse bash colors.
+ * @note	v0.2.0 : Initial version.
  */
 class CMemoryManager : public ILog
 {

@@ -37,7 +37,7 @@ CMemoryManager::CMemoryManager()
 
 	//    throw CLoadingFailed("Memory leaks.log", "Impossible d'accder en criture");
 	m_File << "====================================================================================" << std::endl;
-	m_File << " MemoryManager v" << VERSION_MEMORY_MANAGER << " - Report (Compiled on " << __DATE__ << " @ " << __TIME__ << ")" << std::endl;
+	m_File << VERT << " MemoryManager v" << VERSION_MEMORY_MANAGER << " - Report (Compiled on " << __DATE__ << " @ " << __TIME__ << ")" << STOP << std::endl;
 	m_File << "====================================================================================" << std::endl << std::endl;
 }
 
@@ -52,14 +52,14 @@ CMemoryManager::~CMemoryManager()
 	{
 		m_File << std::endl;
 		m_File << "====================================================================================" << std::endl;
-		m_File << "   No leak detected, congratulations !  " << std::endl;
+		m_File << VERT << "   No leak detected, congratulations !  " << STOP <<std::endl;
 		m_File << "====================================================================================" << std::endl << std::endl;
 	}
 	else
 	{
 		m_File << std::endl;
 		m_File << "====================================================================================" << std::endl;
-		m_File << " Oops... Some leaks have been detected  " << std::endl;
+		m_File << ROUGE << " Oops... Some leaks have been detected  " << STOP << std::endl;
 		m_File << "====================================================================================" << std::endl << std::endl;
 		m_File << std::endl;
 		Report();
@@ -77,7 +77,7 @@ void CMemoryManager::Report()
 	for (TBlockMap::iterator i = m_Blocks.begin(); i != m_Blocks.end(); ++i)
 	{
 		TotalSize += i->second.Size;
-		m_File << "-> 0x" << i->first
+		m_File << ROUGE << "-> 0x" << i->first << STOP
 			<< " | "   << std::setw(7) << std::setfill(' ') << static_cast<int>(i->second.Size) << " bytes"
 			<< " | "   << i->second.File << " (" << i->second.Line << ")" << std::endl;
 		free(i->first);

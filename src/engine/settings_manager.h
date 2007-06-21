@@ -44,7 +44,7 @@ class CSettingsManager
 		/*!
 		 * @brief Destructor.
 		 */
-		~CSettingsManager();
+		virtual ~CSettingsManager();
 
 		/*!
 		 * @brief Store frame size and pos on clean exit (Quit from menu or CTRL+Q).

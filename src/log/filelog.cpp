@@ -28,16 +28,16 @@ GNU General Public License for more details.
 CFileLog::CFileLog(const std::string& Filename) :
 m_File(Filename.c_str())
 {
-	m_File << "  ===========================================" << std::endl;
-	m_File << "   CFileLog  v0.1 - Event log - " << std::endl;
-	m_File << "  ===========================================" << std::endl << std::endl;
+	m_File << "  ===========================================" << "\n";
+	m_File << "   CFileLog  v0.1 - Event log - " << "\n";
+	m_File << "  ===========================================" << "\n" << "\n";
 }
 
 
 CFileLog::~CFileLog()
 {
-	m_File << std::endl;
-	m_File << "  ===========================================" << std::endl;
-	m_File << "   CFileLog closed " << std::endl;
-	m_File << "  ===========================================" << std::endl;
+	m_File << "\n";
+	m_File << "  ===========================================" << "\n";
+	m_File << "   CFileLog closed " << "\n";
+	m_File << "  ===========================================" << "\n";
 }

@@ -32,6 +32,14 @@ GNU General Public License for more details.
 #include <list>
 #include <vector>
 
+//Bash Colors
+#define VERT "\e[0;32m"
+#define ROUGE "\e[0;31m"
+#define BLEU "\e[0;34m"
+#define VIOLET "\e[0;35m"
+#define CYAN "\e[0;36m"
+#define STOP "\e[0m"
+
 //General app infos
 #define MAJOR 0
 #define MINOR 4
