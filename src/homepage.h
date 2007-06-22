@@ -23,6 +23,9 @@ GNU General Public License for more details.
  *
  * \section intro_whatis What is sdatabase ?
  *
+ * $Date$
+ * $Rev$
+ *
  * sdatabase is a simple database manager.
  *
  * Design to access quickly all database you have.
@@ -46,8 +49,4 @@ GNU General Public License for more details.
  *
  * Here is a snapshot of sdatabase under Windows XP Pro (sdatabase v 0.1):
  *  \image html sdatabase_windows2.png
- * \section history History
- *
- * $Date$
- * $Rev$
  */

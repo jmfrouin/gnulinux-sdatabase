@@ -1,4 +1,8 @@
 v 0.4 :
+	21/06/07 :
+		Project now compile using cmake.
+		Memory_manager now use colors.
+
 	17/06/07 :
 		Project add at sf.net.
 		Now sdatabase will use the sf svn repo.
