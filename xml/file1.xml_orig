@@ -1,0 +1,51 @@
+<document>
+ <row>
+  <Col0>John</Col0 >
+  <Col1>Doe</Col1 >
+  <Col2>120 jefferson st.</Col2 >
+  <Col3>Riverside</Col3 >
+  <Col4>NJ</Col4 >
+  <Col5>08075</Col5 >
+ </row>
+ <row>
+  <Col0>Jack</Col0 >
+  <Col1>McGinnis</Col1 >
+  <Col2>220 hobo Av.</Col2 >
+  <Col3>Phila</Col3 >
+  <Col4>PA</Col4 >
+  <Col5>09119</Col5 >
+ </row>
+ <row>
+  <Col0>John &quot;Da Man&quot;</Col0 >
+  <Col1>Repici</Col1 >
+  <Col2>120 Jefferson St.</Col2 >
+  <Col3>Riverside</Col3 >
+  <Col4>NJ</Col4 >
+  <Col5>08075</Col5 >
+ </row>
+ <row>
+  <Col0>Stephen</Col0 >
+  <Col1>Tyler</Col1 >
+  <Col2>7452 Terrace &quot;At the Plaza&quot; road</Col2 >
+  <Col3>SomeTown</Col3 >
+  <Col4>SD</Col4 >
+  <Col5>91234</Col5 >
+ </row>
+ <row>
+  <Col0></Col0 >
+  <Col1>Blankman</Col1 >
+  <Col2></Col2 >
+  <Col3>SomeTown</Col3 >
+  <Col4>SD</Col4 >
+  <Col5>00298</Col5 >
+ </row>
+ <row>
+  <Col0>Joan &quot;the bone&quot;, Anne</Col0 >
+  <Col1>Jet</Col1 >
+  <Col2>9th, at Terrace plc</Col2 >
+  <Col3>Desert City</Col3 >
+  <Col4>CO</Col4 >
+  <Col5>00123</Col5 >
+ </row>
+</document>
+
