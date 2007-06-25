@@ -28,6 +28,8 @@ GNU General Public License for more details.
 #ifndef _SDATABASE_H_
 #define _SDATABASE_H_
 
+#include <string>
+
 /*!
  * @brief Main component (wxApp)
  */
@@ -48,6 +50,12 @@ class SDatabase: public wxApp
 		 * @brief from wxApp.
 		 */
 		virtual bool OnInit();
+
+	private:
+		/*!
+		* @brief Load output format plugins.
+		*/
+		bool __loadPlugins(const std::string& _path);
 };
 
 DECLARE_APP(SDatabase)

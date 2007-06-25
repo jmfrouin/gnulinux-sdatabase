@@ -13,11 +13,11 @@ SET(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
 INCLUDE_DIRECTORIES(AFTER SYSTEM ${CMAKE_BINARY_DIR} .)
 
-SET(folder engine files leak log performance plugins)
+SET(folder engine files leak log performance plugins tools)
 
 FOREACH(fold ${folder})
 	ADD_SUBDIRECTORY(${fold})
 ENDFOREACH(fold ${folder})
 
 ADD_EXECUTABLE(sdatabase interface/sdatabase.cpp interface/edit_dialog.cpp interface/file_explorer.cpp interface/find_dialog.cpp interface/interface.cpp interface/new_table_dialog.cpp interface/tableview.cpp)
-TARGET_LINK_LIBRARIES(sdatabase engine files leak log performance plugins `wx-config --libs`)
+TARGET_LINK_LIBRARIES(sdatabase engine files leak log performance plugins tools `wx-config --libs`)

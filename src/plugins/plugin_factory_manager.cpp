@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "plugin_interface.h"
+#include "iplugin.h"
 #include "plugin_factory_manager.h"
 
 #if defined LEAKS
@@ -56,7 +56,7 @@ int PluginFactoryManager::loadPlugins(const std::string& path)
 	return res;
 }
 
-Plugin* PluginFactoryManager::createObject(const std::string& name)
+IPlugin* PluginFactoryManager::createObject(const std::string& name)
 {
 	if (factories.find(name) != factories.end())
 	{

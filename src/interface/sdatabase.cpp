@@ -48,7 +48,6 @@ SDatabase::SDatabase() : wxApp()
 	g_pa = new CPerformanceAnalysis();
 }
 
-
 SDatabase::~SDatabase()
 {
 	std::cout << "~SDatabase()" << std::endl;
@@ -65,9 +64,17 @@ bool SDatabase::OnInit()
 	wxApp::OnInit();
 	SetAppName (APP_NAME);
 	SetVendorName (APP_VENDOR);
-	CMainFrame* _main = new CMainFrame(NULL);
-	_main->Show(true);
-
+	CMainFrame* l_Main = new CMainFrame(NULL);
+	__loadPlugins("plugins");
+	l_Main->Show(true);
 	g_pa->EndTiming();
 	return true;
+}
+
+bool SDatabase::__loadPlugins(const std::string& _path)
+{
+	bool l_ret = false;
+	CPluginFactoryManager* l_pfm = PluginFactoryManager::instance();
+	l_ret = l_pfm->loadPlugins(_path);
+	return l_ret
 }

@@ -19,8 +19,7 @@ GNU General Public License for more details.
 -------------------------------------------------------------------------
 */
 
-#include <engine/settings_manager.h>
-
+#include "settings_manager.h"
 #include <config.h>
 
 #if defined LEAK_DETECTOR
@@ -72,7 +71,6 @@ void CSettingsManager::StoreFrameSize(wxRect rect)
 	m_Config->Write (key + wxT("/") + LOCATION_H, rect.height);
 }
 
-
 // From : http://wyoguide.sourceforge.net/guidelines/content.html
 wxRect CSettingsManager::DetermineFrameSize ()
 {
@@ -110,42 +108,41 @@ void CSettingsManager::StoreFindSettings(bool _reverse, bool _bookmark)
 	m_Config->Write (key + wxT("/") + FIND_REVERSE, _reverse);
 	m_Config->Write (key + wxT("/") + FIND_BOOKMARK, _bookmark);
 
-	#if defined DEBUG
+#if defined DEBUG
 	std::cout << "[DEBUG] [CSettingsManager] StoreFindSettings(...)" << std::endl;
 	std::cout << "Reverse : " << _reverse << std::endl;
 	std::cout << "Bookmark : " << _bookmark << std::endl;
-	#endif
-
+#endif
 }
 
 
 bool CSettingsManager::LoadFindBookmarkSettings()
 {
-	bool bookmark = false;
+	bool l_Bookmark = false;
 
 	wxString key = LOCATION + wxString("0");
-	m_Config->Read (key + _T("/") + FIND_BOOKMARK, bookmark);
+	m_Config->Read (key + _T("/") + FIND_BOOKMARK, l_Bookmark);
 
 	#if defined DEBUG
 	std::cout << "[DEBUG] [CSettingsManager] LoadFindSettings()" << std::endl;
-	std::cout << "Bookmark : " << bookmark << std::endl;
+	std::cout << "Bookmark : " << l_Bookmark << std::endl;
 	#endif
 
-	return bookmark;
+	return l_Bookmark;
 }
 
 
 bool CSettingsManager::LoadFindReverseSettings()
 {
-	bool reverse = false;
+	bool l_Reverse = false;
 
 	wxString key = LOCATION + wxString("0");
-	m_Config->Read (key + _T("/") + FIND_REVERSE, reverse);
+	m_Config->Read (key + _T("/") + FIND_REVERSE, l_Reverse);
 
-	#if defined DEBUG
+#if defined DEBUG
 	std::cout << "[DEBUG] [CSettingsManager] LoadFindSettings()" << std::endl;
-	std::cout << "Reverse : " << reverse << std::endl;
-	#endif
+	std::cout << "Reverse : " << l_Reverse << std::endl;
+#endif
 
-	return reverse;
+	return l_Reverse;
 }
