@@ -3,33 +3,32 @@
 #include <iostream>
 #include <string>
 
-#include "iplugin.h"
-#include "plugin_factory_manager.h"
+#include "plugin_manager.h"
 
 #if defined LEAKS
 #include <leak_detector.h>
 #endif
 
-PluginFactoryManager* PluginFactoryManager::m_Singleton = 0;
+CPluginManager* CPluginManager::m_Singleton = 0;
 
-PluginFactoryManager::~PluginFactoryManager()
-{
-	
-}
-
-PluginFactoryManager* PluginFactoryManager::instance()
+CPluginManager* CPluginManager::instance()
 {
 	if (m_Singleton == 0)
 	{	
-		m_Singleton = new PluginFactoryManager;
+		m_Singleton = new CPluginManager;
 	}
 	return m_Singleton;
 }
 
-int PluginFactoryManager::loadPlugins(const std::string& path)
+void CPluginManager::stop()
+{
+	delete m_Singleton;
+}
+
+int CPluginManager::loadPlugins(const std::string& path)
 {
 	struct dirent** namelist;
-	int res = 0;
+	int l_res = 0;
 	int n = scandir(path.c_str(), &namelist, 0, alphasort);
 	while (n-- > 0)
 	{
@@ -42,10 +41,8 @@ int PluginFactoryManager::loadPlugins(const std::string& path)
 			void* handler = dlopen (tmp.c_str(), RTLD_NOW);
 			if (handler != 0)
 			{
-#if defined DEBUG
 				std::cout << " " << tmp << " loaded ! " << std::endl;
-#endif
-				res++;
+				l_res++;
 			}
 			else
 			{
@@ -53,16 +50,6 @@ int PluginFactoryManager::loadPlugins(const std::string& path)
 			}
 		}
 	}
-	return res;
+	std::cout << l_res << '\n';
+	return l_res;
 }
-
-IPlugin* PluginFactoryManager::createObject(const std::string& name)
-{
-	if (factories.find(name) != factories.end())
-	{
-		PluginFactory* fact = factories[name];
-		return fact->createInstance();
-	}
-	return 0;
-}
-

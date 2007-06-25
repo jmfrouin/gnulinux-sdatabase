@@ -3,15 +3,14 @@
 
 #include <config.h>
 #include <iostream>
-#include "plugin_manager.h"
 
 template <class T>
 class CPluginInitializer
 {
 	public:
-		CPluginInitializer(const std::string& _path)
+		CPluginInitializer()
 		{
-			//T* l_fact = new T;
+			T* l_obj = new T;
 		}
 };
 

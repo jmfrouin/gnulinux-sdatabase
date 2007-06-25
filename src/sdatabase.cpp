@@ -29,7 +29,8 @@ GNU General Public License for more details.
 #include <performance/performance_analysis.h>
 #include <config.h>
 
-#include "interface.h"
+#include <interface/interface.h>
+#include <plugins/plugin_manager.h>
 #include "sdatabase.h"
 
 IMPLEMENT_APP(SDatabase)
@@ -51,9 +52,10 @@ SDatabase::SDatabase() : wxApp()
 SDatabase::~SDatabase()
 {
 	std::cout << "~SDatabase()" << std::endl;
+	CPluginManager* l_pfm = CPluginManager::instance();
+	l_pfm->stop();
 	delete g_pa;
 }
-
 
 bool SDatabase::OnInit()
 {
@@ -74,7 +76,7 @@ bool SDatabase::OnInit()
 bool SDatabase::__loadPlugins(const std::string& _path)
 {
 	bool l_ret = false;
-	CPluginFactoryManager* l_pfm = PluginFactoryManager::instance();
+	CPluginManager* l_pfm = CPluginManager::instance();
 	l_ret = l_pfm->loadPlugins(_path);
-	return l_ret
+	return l_ret;
 }

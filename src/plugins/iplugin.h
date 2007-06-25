@@ -17,8 +17,8 @@ class IPlugin : public CName
 		virtual ~IPlugin(){}
 
 		/*!
-		 * @brief Get name.
-		 */
-		virtual IPlugin* createInstance() = 0; 
+		* @brief Write database in the plugin format.
+		*/
+		virtual bool Write() = 0;
 };
 #endif 	//_IPLUGIN_H_

@@ -19,5 +19,5 @@ FOREACH(fold ${folder})
 	ADD_SUBDIRECTORY(${fold})
 ENDFOREACH(fold ${folder})
 
-ADD_EXECUTABLE(sdatabase interface/sdatabase.cpp interface/edit_dialog.cpp interface/file_explorer.cpp interface/find_dialog.cpp interface/interface.cpp interface/new_table_dialog.cpp interface/tableview.cpp)
+ADD_EXECUTABLE(sdatabase sdatabase.cpp interface/edit_dialog.cpp interface/file_explorer.cpp interface/find_dialog.cpp interface/interface.cpp interface/new_table_dialog.cpp interface/tableview.cpp)
 TARGET_LINK_LIBRARIES(sdatabase engine files leak log performance plugins tools `wx-config --libs`)
