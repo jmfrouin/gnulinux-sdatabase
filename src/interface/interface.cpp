@@ -219,10 +219,9 @@ void CMainFrame::OnQuit (wxCommandEvent& WXUNUSED(event))
 	Close(true);
 }
 
-
 void CMainFrame::OnSave (wxCommandEvent& WXUNUSED(event))
 {
-	m_Manager->WriteFile();
+	//m_Manager->WriteFile();
 }
 
 
@@ -234,9 +233,7 @@ void CMainFrame::OnNew (wxCommandEvent& WXUNUSED(event))
 	{
 		m_TableView->ClearAll();
 	}
-
 }
-
 
 void CMainFrame::OnOpen (wxCommandEvent& WXUNUSED(event))
 {
@@ -254,7 +251,7 @@ void CMainFrame::OnOpen (wxCommandEvent& WXUNUSED(event))
 
 void CMainFrame::OnAbout (wxCommandEvent& WXUNUSED(event))
 {
-	wxMessageDialog dialog(this, _T("A simple database CManager\nJean-Michel Frouin (c) 2007"), wxT("About"), wxOK|wxCANCEL);
+	wxMessageDialog dialog(this, _T("A simple database manager\nJean-Michel Frouin (c) 2007"), wxT("About"), wxOK|wxCANCEL);
 	dialog.ShowModal();
 }
 

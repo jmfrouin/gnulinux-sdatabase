@@ -1,14 +1,14 @@
-#ifndef _CSV_PLUGIN_H_
-#define _CSV_PLUGIN_H_
+#ifndef _XML_PLUGIN_H_
+#define _XML_PLUGIN_H_
 
 #include <config.h>
 #include <plugins/iplugin.h>
 
-class CcsvPlugin : public IPlugin
+class CxmlPlugin : public IPlugin
 {
 	public:
-		CcsvPlugin();
-		~CcsvPlugin();
+		CxmlPlugin();
+		~CxmlPlugin();
 
 		/*
 		* @brief From IPlugin.
@@ -16,5 +16,5 @@ class CcsvPlugin : public IPlugin
 		bool Write(const std::string& _path);
 };
 
-#endif 	//_CSV_PLUGIN_H_
+#endif 	//_XML_PLUGIN_H_
 

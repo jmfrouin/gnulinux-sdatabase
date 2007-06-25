@@ -11,6 +11,16 @@
 
 CPluginManager* CPluginManager::m_Singleton = 0;
 
+CPluginManager::~CPluginManager()
+{
+	std::cout << "STOPPPPPP" << '\n';
+	std::map<std::string, IPlugin*>::iterator _it;
+	for(_it = m_PluginsList.begin(); _it != m_PluginsList.end(); ++_it)
+	{
+		std::cout << (*_it).first << '\n';
+	}
+}
+
 CPluginManager* CPluginManager::instance()
 {
 	if (m_Singleton == 0)
@@ -52,4 +62,9 @@ int CPluginManager::loadPlugins(const std::string& path)
 	}
 	std::cout << l_res << '\n';
 	return l_res;
+}
+
+void CPluginManager::add(IPlugin* _toadd)
+{
+	m_PluginsList.insert(make_pair(_toadd->getName(), _toadd));	
 }

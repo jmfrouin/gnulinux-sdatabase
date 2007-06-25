@@ -1,25 +1,25 @@
 #include <iostream>
 #include <plugins/plugin_initializer.h>
-#include "csv.h"
+#include "xml.h"
 
 #if defined LEAKS
 #include <leak_detector.h>
 #endif
 
-CcsvPlugin::CcsvPlugin()
+CxmlPlugin::CxmlPlugin()
 {
-	setName("CcsvPlugin");
+	setName("CxmlPlugin");
 }
 
-CcsvPlugin::~CcsvPlugin()
+CxmlPlugin::~CxmlPlugin()
 {
 }
 
-bool CcsvPlugin::Write(const std::string& _path)
+bool CxmlPlugin::Write(const std::string& _path)
 {
 	bool l_ret = false;
 
 	return l_ret;
 }
 
-CPluginInitializer<CcsvPlugin> g_csv;
+CPluginInitializer<CxmlPlugin> g_xml;

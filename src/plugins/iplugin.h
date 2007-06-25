@@ -18,7 +18,8 @@ class IPlugin : public CName
 
 		/*!
 		* @brief Write database in the plugin format.
+		* @param _path Location of file to write.
 		*/
-		virtual bool Write() = 0;
+		virtual bool Write(const std::string& _path) = 0;
 };
 #endif 	//_IPLUGIN_H_

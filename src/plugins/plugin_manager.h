@@ -4,6 +4,7 @@
 #include <config.h>
 #include <map>
 #include <string>
+#include "iplugin.h"
 
 /*!
 *@brief Common source code of all plugins.
@@ -24,9 +25,16 @@ class CPluginManager
 
 		/*!
 		*@brief Load all available plugins. 
+		*@param path The folder location.
 		*@return Number of plugins founded.
 		*/
 		int loadPlugins (const std::string& path);
+
+		/*!
+		*@brief Add a new plugin to the list of available plugins.
+		*@param _toadd Plugin to add.
+		*/
+		void add(IPlugin* _toadd);
 
 	private:
 		/*!
@@ -37,9 +45,10 @@ class CPluginManager
 		/*!
 		* @brief dtor.
 		*/
-		~CPluginManager(){};
+		~CPluginManager();
 
 	private:
-		static CPluginManager* 	m_Singleton; 	///< The singleton itself
+		static CPluginManager* 		m_Singleton; 	///< The singleton itself.
+		std::map<std::string, IPlugin*> m_PluginsList;	///< List of available plugins.
 };
 #endif 	//_PLUGIN_MANAGER_H_
