@@ -21,5 +21,10 @@ class IPlugin : public CName
 		* @param _path Location of file to write.
 		*/
 		virtual bool Write(const std::string& _path) = 0;
+
+		/*!
+		* @brief Wildcard of plugin for open / save FileDialog.
+		*/
+		virtual std::string Wildcard() = 0;
 };
 #endif 	//_IPLUGIN_H_

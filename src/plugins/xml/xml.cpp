@@ -22,4 +22,9 @@ bool CxmlPlugin::Write(const std::string& _path)
 	return l_ret;
 }
 
+std::string CxmlPlugin::Wildcard()
+{
+	return "xml (Extensive Markup Language) files (*.xml)|*.xml";
+}
+
 CPluginInitializer<CxmlPlugin> g_xml;

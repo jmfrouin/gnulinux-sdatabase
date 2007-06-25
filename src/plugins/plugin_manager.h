@@ -36,6 +36,11 @@ class CPluginManager
 		*/
 		void add(IPlugin* _toadd);
 
+		/*!
+		*@brief Return Wildcard for all available plugins.
+		*/
+		std::string Wildcard();
+
 	private:
 		/*!
 		* @brief ctor.

@@ -22,4 +22,9 @@ bool CcsvPlugin::Write(const std::string& _path)
 	return l_ret;
 }
 
+std::string CcsvPlugin::Wildcard()
+{
+	return "csv (Comma Separated Value) files (*.csv)|*.csv";
+}
+
 CPluginInitializer<CcsvPlugin> g_csv;

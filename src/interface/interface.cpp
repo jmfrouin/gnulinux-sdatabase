@@ -35,6 +35,7 @@ GNU General Public License for more details.
 #include <interface/edit_dialog.h>
 #include <interface/new_table_dialog.h>
 
+#include <plugins/plugin_manager.h>
 #include "interface.h"
 #include "config.h"
 
@@ -222,6 +223,16 @@ void CMainFrame::OnQuit (wxCommandEvent& WXUNUSED(event))
 void CMainFrame::OnSave (wxCommandEvent& WXUNUSED(event))
 {
 	//m_Manager->WriteFile();
+	CPluginManager* l_pm = CPluginManager::instance();
+
+	wxFileDialog dialog(this, _T("Please select a file"), wxEmptyString, wxEmptyString, l_pm->Wildcard(), wxFD_SAVE);
+
+	dialog.SetDirectory(wxGetHomeDir());
+	dialog.CentreOnParent();
+
+	if (dialog.ShowModal() == wxID_OK)
+	{
+	}
 }
 
 
@@ -237,7 +248,9 @@ void CMainFrame::OnNew (wxCommandEvent& WXUNUSED(event))
 
 void CMainFrame::OnOpen (wxCommandEvent& WXUNUSED(event))
 {
-	wxFileDialog dialog(this, _T("Please select a SDatabase file"), wxEmptyString, wxEmptyString, _T("csv (Comma Separated Value) files (*.csv)|*.csv"));
+	CPluginManager* l_pm = CPluginManager::instance();
+
+	wxFileDialog dialog(this, _T("Please select a file"), wxEmptyString, wxEmptyString, l_pm->Wildcard(), wxFD_PREVIEW);
 
 	dialog.SetDirectory(wxGetHomeDir());
 	dialog.CentreOnParent();

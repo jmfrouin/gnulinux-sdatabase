@@ -68,3 +68,17 @@ void CPluginManager::add(IPlugin* _toadd)
 {
 	m_PluginsList.insert(make_pair(_toadd->getName(), _toadd));	
 }
+
+std::string CPluginManager::Wildcard()
+{
+	std::string l_ret;
+
+	std::map<std::string, IPlugin*>::iterator _it;
+	for(_it = m_PluginsList.begin(); _it != m_PluginsList.end(); ++_it)
+	{
+		l_ret.append(((*_it).second)->Wildcard());
+		l_ret.append("|");
+	}
+
+	return l_ret;
+}
