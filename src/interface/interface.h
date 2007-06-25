@@ -29,7 +29,7 @@ GNU General Public License for more details.
 #include <interface/tableview.h>
 #include <interface/file_explorer.h>
 #include <interface/find_dialog.h>
-#include <def.h>
+#include <config.h>
 
 /*!
  * @brief The UI of sdatabase derived from wxFrame

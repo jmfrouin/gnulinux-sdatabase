@@ -23,7 +23,7 @@ GNU General Public License for more details.
 #define _IFILE_H_
 
 #include <wx/string.h>
-#include <def.h>
+#include <config.h>
 
 /*!
  * @brief File manipulation plugins interface.

@@ -27,7 +27,7 @@ GNU General Public License for more details.
 #include "find_dialog.h"
 
 #include <interface/interface.h>
-#include <def.h>
+#include <config.h>
 
 #if defined LEAK_DETECTOR
 #include <leak/leak_detector.h>

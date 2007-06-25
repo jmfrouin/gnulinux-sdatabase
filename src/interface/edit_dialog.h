@@ -25,7 +25,7 @@ GNU General Public License for more details.
 #include <vector>
 
 #include <wx/dialog.h>
-#include <def.h>
+#include <config.h>
 
 /*!
  * @brief Edit dialog for insertion in database

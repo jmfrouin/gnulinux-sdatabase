@@ -29,7 +29,7 @@ GNU General Public License for more details.
 #define _NEW_TABLE_DIALOG_H_
 
 #include <wx/dialog.h>
-#include <def.h>
+#include <config.h>
 
 /*!
  * @brief Dialog called when a new base is created.

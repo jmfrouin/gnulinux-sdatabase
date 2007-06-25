@@ -27,7 +27,7 @@ GNU General Public License for more details.
 #include <engine/tools.h>
 #include <files/ifile.h>
 #include <vector>
-#include <def.h>
+#include <config.h>
 
 /*!
  * @brief The database manager

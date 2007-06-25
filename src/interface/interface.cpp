@@ -36,7 +36,7 @@ GNU General Public License for more details.
 #include <interface/new_table_dialog.h>
 
 #include "interface.h"
-#include "def.h"
+#include "config.h"
 
 #if defined LEAK_DETECTOR
 #include <leak/leak_detector.h>

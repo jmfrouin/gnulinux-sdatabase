@@ -27,7 +27,7 @@ GNU General Public License for more details.
 #include <iostream>
 #include <wx/wx.h>
 #include <performance/performance_analysis.h>
-#include <def.h>
+#include <config.h>
 
 #include "interface.h"
 #include "sdatabase.h"

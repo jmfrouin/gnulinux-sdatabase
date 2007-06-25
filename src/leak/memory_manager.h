@@ -28,7 +28,7 @@ GNU General Public License for more details.
 #include <string>
 
 #include <log/ilog.h>
-#include <def.h>
+#include <config.h>
 
 #define MAJOR_MM 0
 #define MINOR_MM 3

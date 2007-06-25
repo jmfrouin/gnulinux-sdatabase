@@ -21,7 +21,7 @@ GNU General Public License for more details.
 
 #include <engine/settings_manager.h>
 
-#include <def.h>
+#include <config.h>
 
 #if defined LEAK_DETECTOR
 #include <leak/leak_detector.h>

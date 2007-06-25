@@ -22,7 +22,7 @@ GNU General Public License for more details.
 #ifndef _TOOLS_H_
 #define _TOOLS_H_
 
-#include <def.h>
+#include <config.h>
 
 /*!
  * @brief A database toolbox.

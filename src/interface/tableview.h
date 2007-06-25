@@ -27,7 +27,7 @@ GNU General Public License for more details.
 
 #include <wx/listctrl.h>
 
-#include <def.h>
+#include <config.h>
 
 /*!
  * @brief Right panel of sdatabase (Display the current opened database).
