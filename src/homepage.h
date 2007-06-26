@@ -19,7 +19,7 @@ GNU General Public License for more details.
 -------------------------------------------------------------------------
 */
 
-/*! \mainpage SDatabase homepage
+/*! \mainpage sdatabase homepage
  *
  * $Date$
  * $Rev$
