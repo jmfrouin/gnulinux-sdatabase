@@ -1,4 +1,7 @@
 v 0.4 :
+	26/06/07 :
+		Plugins system ready.
+
 	21/06/07 :
 		Project now compile using cmake.
 		Memory_manager now use colors.
