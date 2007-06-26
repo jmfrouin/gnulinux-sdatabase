@@ -19,7 +19,6 @@ GNU General Public License for more details.
 -------------------------------------------------------------------------
 */
 
-#include <files/csvfile.h>
 #include "manager.h"
 
 #if defined LEAK_DETECTOR
@@ -29,12 +28,12 @@ GNU General Public License for more details.
 //------------------------------------------------------------------------------------------------
 // Constructors & destructor
 //------------------------------------------------------------------------------------------------
-CManager::CManager()
+CManager::CManager():
+m_File(0), m_Tools(0), m_Table(0), m_Cols(1), m_Rows(0)
 {
 }
 
-int CManager::Construct():
-m_File(0), m_Tools(0), m_Table(0), m_Cols(1), m_Rows(0)
+int CManager::Construct()
 {
     m_Table = new TTable;
     m_Tools = new CTools;
@@ -97,7 +96,7 @@ wxString CManager::GetFilename()
     return m_Filename;
 }
 
-void CManager::WriteFile ()
+void CManager::WriteFile()
 {
     m_File->WriteFile(wxString(_T("poulpe.csv")), *m_Table, m_Title, m_Cols);
 }
