@@ -38,13 +38,6 @@ CxmlPlugin::~CxmlPlugin()
 {
 }
 
-bool CxmlPlugin::Write(const std::string& _path)
-{
-    bool l_ret = false;
-
-    return l_ret;
-}
-
 std::string CxmlPlugin::Wildcard()
 {
     return "xml (Extensive Markup Language) files (*.xml)|*.xml";

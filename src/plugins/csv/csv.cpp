@@ -38,13 +38,6 @@ CcsvPlugin::~CcsvPlugin()
 {
 }
 
-bool CcsvPlugin::Write(const std::string& _path)
-{
-    bool l_ret = false;
-
-    return l_ret;
-}
-
 std::string CcsvPlugin::Wildcard()
 {
     return "csv (Comma Separated Value) files (*.csv)|*.csv";

@@ -15,3 +15,4 @@ Correct output log
 Replace all std::endl by '\n'
 Simpler version managment
 Remove performance manager
+After this release (0.4) use branches !!! for new release !!

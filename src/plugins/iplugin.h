@@ -39,12 +39,6 @@ class IPlugin : public CName, public IFile
         virtual ~IPlugin(){}
 
         /*!
-         * @brief Write database in the plugin format.
-         * @param _path Location of file to write.
-         */
-        virtual bool Write(const std::string& _path) = 0;
-
-        /*!
          * @brief Wildcard of plugin for open / save FileDialog.
          */
         virtual std::string Wildcard() = 0;

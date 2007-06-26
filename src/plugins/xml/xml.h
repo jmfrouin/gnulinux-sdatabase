@@ -34,7 +34,6 @@ class CxmlPlugin : public IPlugin
         /*
          * @brief From IPlugin.
          */
-        bool Write(const std::string& _path);
         std::string Wildcard();
 };
 #endif                           //_XML_PLUGIN_H_
