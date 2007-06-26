@@ -23,6 +23,7 @@ GNU General Public License for more details.
  *
  * $Date$
  * $Rev$
+ * Project homepage : http://www.sf.net/projects/sdatabase/
  *
  * \section intro_history Version history (what's new)
  * v0.4:
