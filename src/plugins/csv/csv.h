@@ -27,16 +27,20 @@ GNU General Public License for more details.
 
 class CcsvPlugin : public IPlugin
 {
-	public:
-		CcsvPlugin();
-		~CcsvPlugin();
+    public:
+        CcsvPlugin();
+        ~CcsvPlugin();
 
-		/*
-		* @brief From IPlugin.
-		*/
-		bool Write(const std::string& _path);
-		std::string Wildcard();
+        /*
+         * @brief From IPlugin.
+         */
+        bool Write(const std::string& _path);
+        std::string Wildcard();
+
+        /*
+         * @brief From IFile.
+         */
+        bool OpenFile(const wxString _filename, TTable& _table, TTuple& _title, int& _cols, int& _rows);
+        bool WriteFile(const wxString _filename, TTable _table, TTuple _title, int _cols);
 };
-
-#endif 	//_CSV_PLUGIN_H_
-
+#endif                           //_CSV_PLUGIN_H_

@@ -25,7 +25,7 @@ GNU General Public License for more details.
 #include <iostream>
 #include <wx/wx.h>
 #include <engine/tools.h>
-#include <files/ifile.h>
+#include <tools/ifile.h>
 #include <vector>
 #include <config.h>
 
@@ -34,93 +34,88 @@ GNU General Public License for more details.
  */
 class CManager
 {
-	public:
-		/*!
-		 * @brief	Default constructor.
-		 */
-		CManager();
-		/*!
-		 * @brief	2nd constructor.
-		 * @return	1 on success, 0 on failure.
-		 */
-		int Construct();
-		/*!
-		 * @brief	Destructor.
-		 */
-		virtual ~CManager();
+    public:
+        /*!
+         * @brief	Default constructor.
+         */
+        CManager();
 
-	public:
+        /*!
+         * @brief	2nd constructor.
+         * @return	1 on success, 0 on failure.
+         */
+        int Construct();
 
-		/*!
-		 * @brief	Retrieve the number of rows of current database.
-		 * @return	The number of rows.
-		 */
-		int GetRows ();
+        /*!
+         * @brief	Destructor.
+         */
+        virtual ~CManager();
 
-		/*!
-		 * @brief	Retrieve the number of cols of current database.
-		 * @return	The number of cols.
-		 */
-		int GetCols ();
+    public:
 
-		/*!
-		 * @brief	Retrieve a pointer on current database.
-		 * @return	Pointer on it.
-		 */
-		TTable* GetTable ();
+        /*!
+         * @brief	Retrieve the number of rows of current database.
+         * @return	The number of rows.
+         */
+        int GetRows ();
 
-		/*!
-		 * @brief	Retrieve the title of cols of current database.
-		 * @return	A vector of string where 1 string is 1 title.
-		 */
-		std::vector<wxString>& GetTitles();
+        /*!
+         * @brief	Retrieve the number of cols of current database.
+         * @return	The number of cols.
+         */
+        int GetCols ();
 
-		/*!
-		 * @brief	Append a tuple to the database.
-		 * @param	_tuple	Tuple to add.
-		 */
-		void Append(TTuple _tuple);
+        /*!
+         * @brief	Retrieve a pointer on current database.
+         * @return	Pointer on it.
+         */
+        TTable* GetTable ();
 
-	#if defined DEBUG
-		/*!
-		 * @brief	Debug display.
-		 */
-		virtual void Display();
-	#endif
+        /*!
+         * @brief	Retrieve the title of cols of current database.
+         * @return	A vector of string where 1 string is 1 title.
+         */
+        std::vector<wxString>& GetTitles();
 
-		/*!
-		 * @brief from CTools
-		 */
-		int SortTable(int _column, bool _mode);
+        /*!
+         * @brief	Append a tuple to the database.
+         * @param	_tuple	Tuple to add.
+         */
+        void Append(TTuple _tuple);
 
-		/*!
-		 * @brief from CTools
-		 */
-		bool Find(wxString _search, int& _col, int& _row, bool _fromlastpos, bool _reverse);
+#if defined DEBUG
+        /*!
+         * @brief	Debug display.
+         */
+        virtual void Display();
+#endif
 
-		/*!
-		 * @brief Retrieve the current database filename;
-		 */
-		wxString GetFilename ();
+        /*!
+         * @brief from CTools
+         */
+        int SortTable(int _column, bool _mode);
+        bool Find(wxString _search, int& _col, int& _row, bool _fromlastpos, bool _reverse);
 
-		/*!
-		 * @brief from IFile
-		 */
-		void WriteFile ();
-		/*!
-		 * @brief from IFile
-		 */
-		bool OpenFile(const wxString _filename);
+        /*!
+         * @brief Retrieve the current database filename;
+         */
+        wxString GetFilename ();
 
-	private:
-		IFile*      m_File;		 ///<Pointer on export / import plugin
-		CTools*     m_Tools;	 ///<Tools for base manipulations (Pointer here to remember to call Construct()
+        /*!
+         * @brief from IFile
+         */
+        void WriteFile ();
+        bool OpenFile(const wxString _filename);
 
-		//Table manipulation
-		wxString    m_Filename;	 ///< Current base filename
-		int         m_Cols;		 ///< Number of columns of current base
-		int         m_Rows;		 ///< Number of rows of current base
-		TTable*     m_Table;	 ///< The base itself
-		TTuple      m_Title;	 ///< Titles of current base
+    private:
+        IFile*      m_File;      ///<Pointer on export / import plugin
+        CTools*     m_Tools;     ///<Tools for base manipulations (Pointer here to remember to call Construct()
+
+        //Table manipulation
+        wxString    m_Filename;  ///< Current base filename
+        int         m_Cols;      ///< Number of columns of current base
+        int         m_Rows;      ///< Number of rows of current base
+        TTable*     m_Table;     ///< The base itself
+        TTuple      m_Title;     ///< Titles of current base
 };
-#endif							 // _CMANAGER_H_
+#endif                           // _CMANAGER_H_

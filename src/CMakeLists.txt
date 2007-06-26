@@ -13,7 +13,7 @@ SET(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
 INCLUDE_DIRECTORIES(AFTER SYSTEM ${CMAKE_BINARY_DIR} .)
 
-SET(folder engine files leak log performance plugins tools)
+SET(folder engine leak log performance plugins tools)
 
 FOREACH(fold ${folder})
 	ADD_SUBDIRECTORY(${fold})

@@ -46,7 +46,7 @@ GNU General Public License for more details.
  *
  * v0.1:
  * \li Initial version.
- *	
+ *
  * \section intro_whatis What is sdatabase ?
  *
  * sdatabase is a simple database manager.

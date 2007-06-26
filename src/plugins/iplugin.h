@@ -25,28 +25,28 @@ GNU General Public License for more details.
 #include <config.h>
 #include <string>
 #include <tools/name.h>
-#include <files/ifile.h>
+#include <tools/ifile.h>
 
 /**
  * @brief Plugin Interface
  */
 class IPlugin : public CName, IFile
 {
-	public:
-		/*!
-		 * @brief dtor.
-		 */
-		virtual ~IPlugin(){}
+    public:
+        /*!
+         * @brief dtor.
+         */
+        virtual ~IPlugin(){}
 
-		/*!
-		* @brief Write database in the plugin format.
-		* @param _path Location of file to write.
-		*/
-		virtual bool Write(const std::string& _path) = 0;
+        /*!
+         * @brief Write database in the plugin format.
+         * @param _path Location of file to write.
+         */
+        virtual bool Write(const std::string& _path) = 0;
 
-		/*!
-		* @brief Wildcard of plugin for open / save FileDialog.
-		*/
-		virtual std::string Wildcard() = 0;
+        /*!
+         * @brief Wildcard of plugin for open / save FileDialog.
+         */
+        virtual std::string Wildcard() = 0;
 };
-#endif 	//_IPLUGIN_H_
+#endif                           //_IPLUGIN_H_

@@ -27,19 +27,19 @@ GNU General Public License for more details.
 
 class CFileLog
 {
-	public :
-		CFileLog(const std::string& Filename = "output.log");
-		~CFileLog();
+    public :
+        CFileLog(const std::string& Filename = "output.log");
+        ~CFileLog();
 
-		template <class T> CFileLog& operator <<(const T& ToLog)
-		{
-			std::ostringstream Stream;
-			Stream << ToLog;
-			m_File << Stream.str();
-			return *this;
-		}
+        template <class T> CFileLog& operator <<(const T& ToLog)
+        {
+            std::ostringstream Stream;
+            Stream << ToLog;
+            m_File << Stream.str();
+            return *this;
+        }
 
-	private:
-		std::ofstream m_File;
+    private:
+        std::ofstream m_File;
 };
-#endif							 // _FILELOG_H
+#endif                           // _FILELOG_H

@@ -26,8 +26,8 @@ GNU General Public License for more details.
 
 void Bob::bob()
 {
-	g_pa->AddFunction("CDummy::dummy");
-	g_pa->StartTiming();
-	std::cout << "Raoul la moule" << std::endl;
-	g_pa->EndTiming();
+    g_pa->AddFunction("CDummy::dummy");
+    g_pa->StartTiming();
+    std::cout << "Raoul la moule" << std::endl;
+    g_pa->EndTiming();
 }

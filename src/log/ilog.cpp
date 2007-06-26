@@ -25,7 +25,6 @@ ILog::ILog()
 {
 }
 
-
 ILog::~ILog()
 {
 }

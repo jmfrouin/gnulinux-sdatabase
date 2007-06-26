@@ -25,11 +25,10 @@ GNU General Public License for more details.
 
 void CDummy::dummy()
 {
-	std::cout << "dummy" << std::endl;
+    std::cout << "dummy" << std::endl;
 }
-
 
 void CDummy::dummy2()
 {
-	std::cout << "dummy2" << std::endl;
+    std::cout << "dummy2" << std::endl;
 }

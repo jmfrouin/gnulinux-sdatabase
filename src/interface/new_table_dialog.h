@@ -36,14 +36,14 @@ GNU General Public License for more details.
  */
 class CNewTableDialog: public wxDialog
 {
-	public:
-		/*!
-		 * @brief Default constructor.
-		 * @param parent Parent pointer.
-		 */
-		CNewTableDialog(wxWindow * parent);
+    public:
+        /*!
+         * @brief Default constructor.
+         * @param parent Parent pointer.
+         */
+        CNewTableDialog(wxWindow * parent);
 
-	private:
-		int         m_Number;
+    private:
+        int         m_Number;
 };
-#endif							 // _NEW_TABLE_DIALOG_H_
+#endif                           // _NEW_TABLE_DIALOG_H_

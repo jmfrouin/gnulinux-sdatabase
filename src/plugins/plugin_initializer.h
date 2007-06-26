@@ -30,13 +30,12 @@ GNU General Public License for more details.
 template <class T>
 class CPluginInitializer
 {
-	public:
-		CPluginInitializer()
-		{
-			CPluginManager* l_pfm = CPluginManager::instance();
-			T* l_obj = new T;
-			l_pfm->add(l_obj);
-		}
+    public:
+        CPluginInitializer()
+        {
+            CPluginManager* l_pfm = CPluginManager::instance();
+            T* l_obj = new T;
+            l_pfm->add(l_obj);
+        }
 };
-
-#endif 	//_PLUGIN_INITIALIZER_H_
+#endif                           //_PLUGIN_INITIALIZER_H_

@@ -27,10 +27,10 @@ GNU General Public License for more details.
  */
 class Bob
 {
-	public:
-		/*!
-		 * @brief Simple function to test code injection.
-		 */
-		void bob();
+    public:
+        /*!
+         * @brief Simple function to test code injection.
+         */
+        void bob();
 };
 #endif

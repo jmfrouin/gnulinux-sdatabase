@@ -29,22 +29,22 @@ GNU General Public License for more details.
  */
 class ILog
 {
-	public:
-		/*!
-		 * @brief	Default constructor.
-		 */
-		ILog();
-		/*!
-		 * @brief	Destructor.
-		 */
-		virtual ~ILog();
+    public:
+        /*!
+         * @brief	Default constructor.
+         */
+        ILog();
+        /*!
+         * @brief	Destructor.
+         */
+        virtual ~ILog();
 
-		/*!
-		 * @brief	Write report.
-		 */
-		virtual void Report() = 0;
+        /*!
+         * @brief	Write report.
+         */
+        virtual void Report() = 0;
 
-	public:
-		std::ofstream      m_File;
+    public:
+        std::ofstream      m_File;
 };
-#endif							 //_ILOG_H_
+#endif                           //_ILOG_H_

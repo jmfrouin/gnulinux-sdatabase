@@ -33,5 +33,5 @@ END_EVENT_TABLE ()
 
 void CFileExplorer::OnSel(wxTreeEvent& event)
 {
-	((CMainFrame*)m_Parent)->OnOpenFile(GetFilePath());
+    ((CMainFrame*)m_Parent)->OnOpenFile(GetFilePath());
 }

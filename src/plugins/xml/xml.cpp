@@ -27,9 +27,11 @@ GNU General Public License for more details.
 #include <leak_detector.h>
 #endif
 
+CPluginInitializer<CxmlPlugin> g_xml;
+
 CxmlPlugin::CxmlPlugin()
 {
-	setName("CxmlPlugin");
+    setName("CxmlPlugin");
 }
 
 CxmlPlugin::~CxmlPlugin()
@@ -38,14 +40,22 @@ CxmlPlugin::~CxmlPlugin()
 
 bool CxmlPlugin::Write(const std::string& _path)
 {
-	bool l_ret = false;
+    bool l_ret = false;
 
-	return l_ret;
+    return l_ret;
 }
 
 std::string CxmlPlugin::Wildcard()
 {
-	return "xml (Extensive Markup Language) files (*.xml)|*.xml";
+    return "xml (Extensive Markup Language) files (*.xml)|*.xml";
 }
 
-CPluginInitializer<CxmlPlugin> g_xml;
+bool CxmlPlugin::OpenFile(const wxString _filename, TTable& _table, TTuple& _title, int& _cols, int& _rows)
+{
+    return true;
+}
+
+bool CxmlPlugin::WriteFile(const wxString _filename, TTable _table, TTuple _title, int _cols)
+{
+    return true;
+}

@@ -24,8 +24,8 @@ GNU General Public License for more details.
 
 class CDummy
 {
-	public:
-		void dummy();
-		void dummy2();
+    public:
+        void dummy();
+        void dummy2();
 };
-#endif							 //_DUMMY_H_
+#endif                           //_DUMMY_H_

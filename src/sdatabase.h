@@ -35,28 +35,28 @@ GNU General Public License for more details.
  */
 class SDatabase: public wxApp
 {
-	public:
+    public:
 
-		/*!
-		 *  Default constructor.
-		 */
-		SDatabase();
-		/*!
-		 * Destructor.
-		 */
-		~SDatabase();
+        /*!
+         *  Default constructor.
+         */
+        SDatabase();
+        /*!
+         * Destructor.
+         */
+        ~SDatabase();
 
-		/*!
-		 * @brief from wxApp.
-		 */
-		virtual bool OnInit();
+        /*!
+         * @brief from wxApp.
+         */
+        virtual bool OnInit();
 
-	private:
-		/*!
-		* @brief Load output format plugins.
-		*/
-		bool __loadPlugins(const std::string& _path);
+    private:
+        /*!
+         * @brief Load output format plugins.
+         */
+        bool __loadPlugins(const std::string& _path);
 };
 
 DECLARE_APP(SDatabase)
-#endif							 // _SDATABASE_H_
+#endif                           // _SDATABASE_H_

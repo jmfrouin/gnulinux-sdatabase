@@ -27,16 +27,14 @@ GNU General Public License for more details.
 
 class CxmlPlugin : public IPlugin
 {
-	public:
-		CxmlPlugin();
-		~CxmlPlugin();
+    public:
+        CxmlPlugin();
+        ~CxmlPlugin();
 
-		/*
-		* @brief From IPlugin.
-		*/
-		bool Write(const std::string& _path);
-		std::string Wildcard();
+        /*
+         * @brief From IPlugin.
+         */
+        bool Write(const std::string& _path);
+        std::string Wildcard();
 };
-
-#endif 	//_XML_PLUGIN_H_
-
+#endif                           //_XML_PLUGIN_H_
