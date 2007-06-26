@@ -30,7 +30,7 @@ GNU General Public License for more details.
 /**
  * @brief Plugin Interface
  */
-class IPlugin : public CName, IFile
+class IPlugin : public CName, public IFile
 {
     public:
         /*!
