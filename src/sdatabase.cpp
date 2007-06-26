@@ -37,7 +37,7 @@ IMPLEMENT_APP(SDatabase)
 
 #include <leak/memory_manager.h>
 
-CPerformanceAnalysis* g_pa;
+//CPerformanceAnalysis* g_pa;
 CMemoryManager g_mm;
 
 #if defined LEAK_DETECTOR
@@ -46,7 +46,7 @@ CMemoryManager g_mm;
 
 SDatabase::SDatabase() : wxApp()
 {
-	g_pa = new CPerformanceAnalysis();
+	//g_pa = new CPerformanceAnalysis();
 }
 
 SDatabase::~SDatabase()
@@ -54,22 +54,23 @@ SDatabase::~SDatabase()
 	std::cout << "~SDatabase()" << std::endl;
 	CPluginManager* l_pfm = CPluginManager::instance();
 	l_pfm->stop();
-	delete g_pa;
+	//delete g_pa;
 }
 
 bool SDatabase::OnInit()
 {
 	//Performance analysis
-	g_pa->AddFunction("bool SDatabase::OnInit()");
-	g_pa->StartTiming();
+	//g_pa->AddFunction("bool SDatabase::OnInit()");
+	//g_pa->StartTiming();
 
 	wxApp::OnInit();
-	SetAppName (APP_NAME);
+	SetAppName (APP_NAME + _T(VER));
 	SetVendorName (APP_VENDOR);
 	CMainFrame* l_Main = new CMainFrame(NULL);
 	__loadPlugins("plugins");
 	l_Main->Show(true);
-	g_pa->EndTiming();
+
+	//g_pa->EndTiming();
 	return true;
 }
 

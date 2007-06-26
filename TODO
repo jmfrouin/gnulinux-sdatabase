@@ -14,5 +14,4 @@ Correct Next Find
 Correct output log
 Replace all std::endl by '\n'
 Simpler version managment
-svn propedit on sf.net
-
+Remove performance manager

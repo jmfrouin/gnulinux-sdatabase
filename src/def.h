@@ -48,7 +48,7 @@ GNU General Public License for more details.
 #define VERSION(M,m,b) t(M) "." t(m) "." t(b)
 #define VER VERSION(MAJOR,MINOR,BUG)
 
-const wxString APP_NAME = _T("SDatabase v0.40");
+const wxString APP_NAME = _T("SDatabase v");
 const wxString APP_VENDOR = _T("JMFSoft");
 
 //Frame size & location infos

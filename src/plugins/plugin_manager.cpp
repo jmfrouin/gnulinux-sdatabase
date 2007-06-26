@@ -13,7 +13,7 @@ CPluginManager* CPluginManager::m_Singleton = 0;
 
 CPluginManager::~CPluginManager()
 {
-	std::cout << "STOPPPPPP" << '\n';
+	std::cout << "Plugins I know : " << '\n';
 	std::map<std::string, IPlugin*>::iterator _it;
 	for(_it = m_PluginsList.begin(); _it != m_PluginsList.end(); ++_it)
 	{

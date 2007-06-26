@@ -65,8 +65,8 @@ CTools::~CTools()
 
 int CTools::SortTable(TTable* _input, TTable& _output, int _column, bool _mode)
 {
-	g_pa->AddFunction("int CTools::SortTable(TTable* _input, TTable& _output, int _column, bool _mode)");
-	g_pa->StartTiming();
+	//g_pa->AddFunction("int CTools::SortTable(TTable* _input, TTable& _output, int _column, bool _mode)");
+	//g_pa->StartTiming();
 	//Create a vector of string that we will sort
 	TTuple _maxtuple;
 	std::string _max;
@@ -95,7 +95,7 @@ int CTools::SortTable(TTable* _input, TTable& _output, int _column, bool _mode)
 
 	_input->remove(_maxtuple);
 	_output.push_back(_maxtuple);
-	g_pa->StartTiming();
+	//g_pa->StartTiming();
 	return SortTable(_input, _output, _column, _mode);
 }
 

@@ -21,10 +21,32 @@ GNU General Public License for more details.
 
 /*! \mainpage SDatabase homepage
  *
- * \section intro_whatis What is sdatabase ?
- *
  * $Date$
  * $Rev$
+ *
+ * \section intro_history Version history (what's new)
+ * v0.4:
+ * \li sdatabase use a plugin system : csv, xml.
+ * \li Compilation using cmake.
+ * \li leaks detector now use bash colors for report generation.
+ * \li Project add to sf.net.
+ * \li svn repo switch on sf one.
+ *
+ * v0.3:
+ * \li Performance manager + asm code injection (to remove).
+ * \li A real C++ memory leak is implemented ! (I hope).
+ * \li File logger.
+ *
+ * v0.2:
+ * \li Reverse mode for find box : not yet fully implemented.
+ * \li Bookmark & clean bookmarks (star icon add).
+ * \li Settings manager.
+ * \li Find box.
+ *
+ * v0.1:
+ * \li Initial version.
+ *	
+ * \section intro_whatis What is sdatabase ?
  *
  * sdatabase is a simple database manager.
  *
